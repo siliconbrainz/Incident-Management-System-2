@@ -6,3 +6,4 @@ class DropSerializer(ModelSerializer):
     class Meta:
         model = Drop
         fields = '__all__'
+    

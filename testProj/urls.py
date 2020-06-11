@@ -10,5 +10,6 @@ urlpatterns = [
     path('', include('Account.urls')),
     path('api/pickup/', include('Pickup.urls')),
     path('api/drop/', include('Drop.urls')),
+    path('api/complete/', include('Completed.urls')),
     path('admin/', admin.site.urls),
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

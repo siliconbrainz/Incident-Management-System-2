@@ -1,0 +1,456 @@
+{
+	"info": {
+		"_postman_id": "12cf7381-f899-4471-9a21-a7e8ea2c1bfb",
+		"name": "cmp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Account",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\":\"ramesh12\",\n\t\"email\":\"ramesh12@gmail.com\",\n\t\"password\":\"ramesh12\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\":\"harish\",\n\t\"password\":\"harish\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UserProfile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "token 4ffc3384eba9635a6c265b99945acc8cf1680ab8d965d828591f359f63d130ee",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/auth/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "token 4ffc3384eba9635a6c265b99945acc8cf1680ab8d965d828591f359f63d130ee",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/auth/logout/?",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"logout",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Pickup",
+			"item": [
+				{
+					"name": "AssignedCalls",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "token 7306f3c79af389f095011c6759b71c3a2ceb1cd0c85fe8ac2f5c7fa8f4439bde",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t \"odoMetervalue\": \"12500\",\n\t \"cdPlayer\": \"True\",\n     \"cigrateCharger\": \"True\",\n     \"toolKit\": \"True\",\n     \"rcNo\":\"KA-04-EE-1961\"\n\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/pickup/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"pickup",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pickup",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "token 7306f3c79af389f095011c6759b71c3a2ceb1cd0c85fe8ac2f5c7fa8f4439bde",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t \"odoMetervalue\": \"12500\",\n\t \"cdPlayer\": \"True\",\n     \"cigrateCharger\": \"True\",\n     \"toolKit\": \"True\",\n     \"rcNo\":\"KA-01-EE-0001\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/pickup/46310c21-1e09-459a-a4ac-0be934b55ac3/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"pickup",
+								"46310c21-1e09-459a-a4ac-0be934b55ac3",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ParticularPick",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "token 7306f3c79af389f095011c6759b71c3a2ceb1cd0c85fe8ac2f5c7fa8f4439bde",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/pickup/46310c21-1e09-459a-a4ac-0be934b55ac3/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"pickup",
+								"46310c21-1e09-459a-a4ac-0be934b55ac3",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Drop",
+			"item": [
+				{
+					"name": "Pick",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "token 7306f3c79af389f095011c6759b71c3a2ceb1cd0c85fe8ac2f5c7fa8f4439bde",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/drop/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"drop",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Drop",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "token 7306f3c79af389f095011c6759b71c3a2ceb1cd0c85fe8ac2f5c7fa8f4439bde",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"remarks\":\"hello world \"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/drop/46310c21-1e09-459a-a4ac-0be934b55ac3/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"drop",
+								"46310c21-1e09-459a-a4ac-0be934b55ac3",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ParticularDrop",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "token 7306f3c79af389f095011c6759b71c3a2ceb1cd0c85fe8ac2f5c7fa8f4439bde",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/drop/46310c21-1e09-459a-a4ac-0be934b55ac3/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"drop",
+								"46310c21-1e09-459a-a4ac-0be934b55ac3",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Completed",
+			"item": [
+				{
+					"name": "DropCompleted",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "token 7306f3c79af389f095011c6759b71c3a2ceb1cd0c85fe8ac2f5c7fa8f4439bde",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/complete/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"complete",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ParticularDropCompleted",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "token 7306f3c79af389f095011c6759b71c3a2ceb1cd0c85fe8ac2f5c7fa8f4439bde",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/complete/46310c21-1e09-459a-a4ac-0be934b55ac3/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"complete",
+								"46310c21-1e09-459a-a4ac-0be934b55ac3",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

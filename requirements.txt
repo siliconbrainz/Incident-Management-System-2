@@ -14,7 +14,7 @@ djangorestframework==3.11.0
 djangorestframework-simplejwt==4.4.0
 idna==2.9
 phonenumbers==8.12.5
-Pillow==7.1.2
+Pillow==9.0.0
 pycparser==2.20
 PyJWT==1.7.1
 pytz==2020.1
